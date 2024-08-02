@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esencia del mar Perú</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!--Icon-Font-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="image/logo_1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .banner {
+            background: url('image/img3.png') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+        }
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 154, 186, 0.7);
+            z-index: 1;
+        }
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #ffffff;
+            padding: 150px 20px;
+        }
+        .footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .footer img {
+            width: 300px; /* Ajustar tamaño de la imagen del logo */
+        }
+        .footer .social-icons img {
+            width: 35px; /* Ajustar tamaño de los íconos de redes sociales */
+            margin: 0 10px;
+        }
+        .footer .reclamaciones img {
+            width: 20px; /* Ajustar tamaño del ícono del libro */
+            margin-right: 5px;
+        }
+        .footer .highlight {
+            color: #00B6DC; /* Color celeste */
+        }
+        /* style.css Ventana Emergente */
+        .popup {
+            display: none; /* Initially hidden */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+        
+        .popup-content {
+            color: #005295;
+            background-color: #fff;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on content */
+        }
+    </style>
+</head>
+<body>
+    <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp" target="_blank">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#"><img src="image/logo_1.png" alt="Logo" style="height:40px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="carta.html">Carta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Reservaciones.html">Reservacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Galería.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Contacto.html">Contacto</a>
+                    </li>
+                    <!-- Add more menu items here -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Aquí comienza el código del carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/img1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/img2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/img3.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Aquí termina el código del carrusel -->
+
+    <!-- Aquí comienza el código del banner -->
+    <div class="d-flex align-items-center justify-content-center bg-light text-dark p-5"
+         style="background: url('image/img3.png') no-repeat center center; background-size: cover; height: 400px; position: relative;">
+        <div style="background: url('ruta_de_tu_imagen.jpg') no-repeat center center; background-size: cover; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1;"></div>
+        <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 154, 186, 0.7); z-index: 2;"></div>
+        <div class="text-center text-dark" style="z-index: 3;">
+            <h2><strong><span style="color: #FFFFFF;">Somos especialistas</span> <span style="color: #005295;">en pescados y mariscos</span></strong></h2>
+            <p style="color: #FFFFFF;"><strong>Y también te ofrecemos una gran variedad de platos criollos, aperitivos, ensaladas y bebidas.</strong></p>
+            <a href="carta.html" class="btn btn-primary mt-3" style="background-color: #005295;"><strong>Quiero ver la carta</strong></a>
+        </div>
+    </div>
+    <!-- Aquí termina el código del banner -->
+
+    <!-- inicio de segundo banner-->
+<div style="display: flex; align-items: center; height: 600px;">
+    <div style="flex: 1; padding: 20px; text-align: center;">
+        <h1 style="font-size: 32px; font-weight: bold; color: #005295;">Ahora también puedes</h1>
+          <h1 style="font-size: 40px; font-weight: bold; color: #005295;">Ordenar por</h1>
+          <h1 style="font-size: 40px; font-weight: bold; color: #00B6DC">Delivery!</h1>
+          <div style="width: 72px; height: 4px; background-color: #00B6DC; margin: 20px auto;"></div>
+          <h1 style="font-size: 25px; font-weight: bold; color: #C7D1D8">San Borja: (01)346-2525</h1>
+          <h1 style="font-size: 25px; font-weight: bold; color: #C7D1D8">La Molina: (01)349-1588</h1>
+    </div>
+    <div style="flex: 1;">
+        <img src="image/food1.png" style="width: 90%; height: 90%; object-fit: cover;">
+    </div>
+  </div>
+  <!--fin de segundo banner-->
+  
+
+    <!-- Inicio Footer -->
+    <footer class="footer">
+        <img src="image/logo_2.png">
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="image/fb_icon.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="image/ig_icon.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com" target="_blank"><img src="image/tk_icon.png" alt="Tiktok"></a>
+        </div>
+        <br>
+        <p><span class="highlight">SAN BORJA</span> Av. Aguacero Nº 1122 • <span class="highlight">LA MOLINA</span> Av. Obreros Nº 421</p>
+        <p>© Esencia del mar Perú 2020. Todos los derechos reservados.</p>
+        <p class="reclamaciones"><img src="image/libro_rec_icon.png" alt="Libro"> <a href="popup.html" style="color: white; text-decoration: underline;" target="_blank" onclick="return window.open('reclamaciones.html', '', 'width=1024,height=720')">Libro de reclamaciones</a> </p>
+        
+            
+        <script>
+            // script.js
+
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block' ;
+        }
+        
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+        </script>
+    </footer>
+    <!-- Final Footer -->
+
+    <!-- Aquí se agrega el script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

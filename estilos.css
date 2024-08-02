@@ -1,0 +1,62 @@
+
+.contenedor{
+    display: grid;/*genera cuadricula pra ordenar en filas y columnas*/
+    padding: 1rem;/*espacio interno de 1rem*/
+    grid-template-columns: repeat(4,183px);/*columnas se repite 4 veces con ancho 183px*/
+    grid-template-rows: 230px 230px 230px;/*230 a cada fila y asi cada fila*/
+    gap: 5em;/*espacio de elementos de la cuadricula*/
+}
+.caja{
+    text-align: center;/*centra el texto*/
+}
+.contenedor img {
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+#plato-de-ceviche{
+    width: 100%;/*ancho*/
+    height: 100%;/*altura*/
+}
+.caja p{
+    margin: 2px;/*margen exterior de 2*/
+    color: #005295; 
+    font-family: 'core-rhino' !important; 
+    font-size: 28px;/*tamaño letra*/
+    font-weight: bold;/*letra negrita*/
+}
+
+
+
+
+
+
+/*logo wsp*/
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
+
+
+
